@@ -6,9 +6,13 @@ class UserController {
         });
     }
     updateToken(req, res) {
-        console.log(req.body);
+        let access_token = req.get("Authorization");
+        console.log(access_token);
 
-        res.status(200).json({message: 'Saved', success: true});
+        global.models.user.find({where: {access_token: access_token}}).then((user) => {
+            user.update({refresh_token: req.body.refresh_token})
+                .then(() => res.status(200).json({message: 'Token Updated', success: true}));
+        });
     }
 }
 
