@@ -6,7 +6,8 @@ class DBManager {
     setup(connection) {
         return new Promise((resolve, reject) => {
             try {
-                require('./user/index')(Sequelize, connection);
+                require('./user')(Sequelize, connection);
+                require('./device')(Sequelize, connection);
 
             } catch (ex) {
                 console.log(ex);
