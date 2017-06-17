@@ -8,7 +8,7 @@ module.exports = function (Sequelize, sequelize) {
         device_id: {
             type: Sequelize.INTEGER
         },
-        oxygen: {
+        carbon: {
             type: Sequelize.INTEGER
         },
         temp: {
