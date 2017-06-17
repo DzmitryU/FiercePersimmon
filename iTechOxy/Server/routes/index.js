@@ -22,6 +22,11 @@ let routes = [
         path: '/api/v1/oxygen',
         httpMethod: 'PUT',
         middleware: [oxygenController.log]
+    },
+    {
+        path: '/api/v1/oxygen',
+        httpMethod: 'GET',
+        middleware: [oxygenController.get]
     }
 ];
 

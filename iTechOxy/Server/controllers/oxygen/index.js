@@ -27,6 +27,20 @@ class OxygenController {
                 value = 5;
             }
             return value;
+        };
+
+        this.get = (req, res) => {
+            let access_token = req.get("Authorization");
+            global.models.user.find({where: {access_token: access_token}}).then((user) => {
+                console.log(user.room);
+                global.models.device.find({where: {room: user.room}}).then((device) => {
+                    console.log(device.id);
+                    global.models.state.find({where: {device_id: device.id}, order: [['time', 'DESC']]}).then((result) => {
+                        console.log(result.id);
+                        res.status(200).json({message: 'Found', success: true, body: result});
+                    });
+                });
+            })
         }
     }
 }

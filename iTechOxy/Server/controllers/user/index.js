@@ -13,7 +13,7 @@ class UserController {
                     console.log(ex);
                     res.status(500).json({message: ex, success: false});
                 });
-        }
+        };
         this.updateToken = (req, res) => {
             console.log(req.body);
             let access_token = req.get("Authorization");
