@@ -7,7 +7,10 @@ module.exports = function (Sequelize, sequelize) {
         room: {
             type: Sequelize.STRING
         },
-        token: {
+        access_token: {
+            type: Sequelize.STRING
+        },
+        refresh_token: {
             type: Sequelize.STRING
         }
     });
