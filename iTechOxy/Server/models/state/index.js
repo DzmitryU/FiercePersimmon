@@ -14,6 +14,9 @@ module.exports = function (Sequelize, sequelize) {
         temp: {
             type: Sequelize.INTEGER
         },
+        quality: {
+            type: Sequelize.INTEGER
+        },
         time: {
             type: Sequelize.INTEGER,
             defaultValue: function () {
