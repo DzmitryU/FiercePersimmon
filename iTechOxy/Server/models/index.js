@@ -8,6 +8,7 @@ class DBManager {
             try {
                 require('./user')(Sequelize, connection);
                 require('./device')(Sequelize, connection);
+                require('./state')(Sequelize, connection);
 
             } catch (ex) {
                 console.log(ex);
