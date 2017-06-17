@@ -19,10 +19,14 @@ class UserController {
             let access_token = req.get("Authorization");
             console.log(access_token);
 
-            global.models.user.find({where: {access_token: access_token}}).then((user) => {
-                user.update({refresh_token: req.body.refresh_token})
-                    .then(() => res.status(200).json({message: 'Token Updated', success: true}));
-            });
+            if (req.body.refresh_token) {
+                res.status(200).json({message: 'Token Was not updated', success: false})
+            } else {
+                global.models.user.find({where: {access_token: access_token}}).then((user) => {
+                    user.update({refresh_token: req.body.refresh_token})
+                        .then(() => res.status(200).json({message: 'Token Updated', success: true}));
+                });
+            }
         }
     }
 }
