@@ -2,7 +2,8 @@ module.exports = function (Sequelize, sequelize) {
     const State = sequelize.define('state', {
         id: {
             type: Sequelize.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         device_id: {
             type: Sequelize.INTEGER
