@@ -12,6 +12,9 @@ module.exports = function (Sequelize, sequelize) {
         },
         refresh_token: {
             type: Sequelize.STRING
+        },
+        name: {
+            type: Sequelize.STRING
         }
     });
 };

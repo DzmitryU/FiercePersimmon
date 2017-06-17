@@ -7,10 +7,9 @@ const DBManager = require('./models/index');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-let models;
 let dbManager = new DBManager();
 dbManager.getConnection().then((db) => {
-    models = db.models;
+    global.models = db.models;
 });
 
 require('./routes')(app);
