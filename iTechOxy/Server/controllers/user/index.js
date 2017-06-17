@@ -7,7 +7,11 @@ class UserController {
             } else {
                 res.status(404).json({message: 'User not found in SMG', success: false});
             }
-        });
+        })
+            .catch((ex) => {
+                console.log(ex);
+                res.status(500).json({message: ex, success: false});
+            });
     }
     updateToken(req, res) {
         console.log(req.body);
