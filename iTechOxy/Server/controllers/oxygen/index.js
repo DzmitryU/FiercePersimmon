@@ -37,7 +37,7 @@ class OxygenController {
                     console.log(device.id);
                     global.models.state.find({where: {device_id: device.id}, order: [['time', 'DESC']]}).then((result) => {
                         console.log(result.id);
-                        res.status(200).json({message: 'Found', success: true, body: result});
+                        res.status(200).json({message: 'Found', success: true, body: {room: user.room, state: result}});
                     });
                 });
             })
