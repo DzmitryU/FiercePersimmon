@@ -8,8 +8,8 @@
     "host": "itech-rating.cgsi5v3hf1oi.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "database": "itech_rating",
-    "user": "root",
-    "password": "rating-root",
+    "user": "<PUT REAL DATA>",
+    "password": "<PUT REAL DATA>",
     "timezone": "+03:00"
   }
 }
