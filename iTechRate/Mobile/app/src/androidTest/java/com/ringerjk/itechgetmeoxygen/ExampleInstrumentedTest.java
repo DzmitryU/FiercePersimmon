@@ -1,4 +1,4 @@
-package com.ringerjk.itechrate;
+package com.ringerjk.itechgetmeoxygen;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ringerjk.itechrate", appContext.getPackageName());
+        assertEquals("com.ringerjk.itechgetmeoxygen", appContext.getPackageName());
     }
 }

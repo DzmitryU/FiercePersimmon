@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "308343545392",
+    "firebase_url": "https://itechgetmeoxygen-d1dcf.firebaseio.com",
+    "project_id": "itechgetmeoxygen-d1dcf",
+    "storage_bucket": "itechgetmeoxygen-d1dcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308343545392:android:0ca0f28e4c266421",
+        "android_client_info": {
+          "package_name": "com.ringerjk.itechgetmeoxygen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308343545392-v94m761gu5k44hulu40j1korvij38ufi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ringerjk.itechgetmeoxygen",
+            "certificate_hash": "3be283c806bc88d678fc7b797969129a06ccfcf7"
+          }
+        },
+        {
+          "client_id": "308343545392-dc515fi3pce72ap2n240jshi18ru7je5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoqpwYL6CccLzf5P0rL3WzTaUuo0I5zQ0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308343545392-dc515fi3pce72ap2n240jshi18ru7je5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

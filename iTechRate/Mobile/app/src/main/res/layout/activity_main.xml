@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorThirdBackground"
+    android:orientation="vertical"
+    tools:context="com.ringerjk.itechgetmeoxygen.ui.MainActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Temperature"
+                android:textColor="@color/colorSecondaryBackground"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_temperature_tv"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textSize="26sp"
+                tools:text="24 С"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Carbon"
+                android:textColor="@color/colorSecondaryBackground"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/current_co2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textSize="26sp"
+                tools:text="1200 PPM"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/duration_spinner_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@android:color/white"/>
+
+    <com.github.mikephil.charting.charts.CombinedChart
+        android:id="@+id/chart_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

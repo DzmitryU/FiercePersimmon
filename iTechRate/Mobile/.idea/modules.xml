@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ITechRate.iml" filepath="$PROJECT_DIR$/ITechRate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ITechGetMeOxygen.iml" filepath="$PROJECT_DIR$/ITechGetMeOxygen.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

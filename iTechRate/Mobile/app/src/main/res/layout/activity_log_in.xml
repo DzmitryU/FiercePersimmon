@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorThirdBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.ringerjk.itechgetmeoxygen.ui.LogInActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="SMG Log-in"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/login_et_login_activity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:hint="Login"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/password_et_login_activity"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPassword"
+        android:background="@android:color/white"
+        android:hint="Password"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/log_in_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightBlue"
+        android:text="Log In"
+        android:textColor="@android:color/white"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

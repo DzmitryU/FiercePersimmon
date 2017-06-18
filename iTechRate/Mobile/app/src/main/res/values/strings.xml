@@ -1,16 +1,18 @@
 <resources>
-    <string name="app_name">ITechRate</string>
+    <string name="app_name">ITechGetMeOxygen</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="hours_24">24 hours</string>
+    <string name="hours_48">48 hours</string>
+    <string name="hours_72">72 hours</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+
+    <string-array name="duration_array">
+        <item>@string/hours_24</item>
+        <item>@string/hours_48</item>
+        <item>@string/hours_72</item>
+        <item>@string/week</item>
+        <item>@string/month</item>
+    </string-array>
+
 </resources>

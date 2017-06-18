@@ -1,4 +1,4 @@
-package com.ringerjk.itechrate;
+package com.ringerjk.itechgetmeoxygen;
 
 import org.junit.Test;
 
