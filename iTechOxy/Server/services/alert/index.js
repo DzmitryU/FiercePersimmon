@@ -5,15 +5,15 @@ class AlertService {
         this.lastAlert = 0;
         this.alert = (device_id) => {
             let currentTime = new Date().getTime();
-            console.log(currentTime - this.lastAlert);
+            console.log('Push time diference: ' + (currentTime - this.lastAlert));
             if (currentTime - this.lastAlert > 30000) {
                 this.lastAlert = currentTime;
                 models.device.find({where: {id: device_id}}).then((device) => {
-                    console.log(device.room);
+                    console.log('Device room: ' + device.room);
                     models.user.findAll({where: {room: device.room, refresh_token: {$ne: null}}}).then((users) => {
                         if (users) {
                             users.forEach((user) => {
-                                console.log(user.refresh_token);
+                                console.log('User refresh_token: ' + user.refresh_token);
                                 // Set the headers
                                 let headers = {
                                     'User-Agent':       'Super Agent/0.0.1',
