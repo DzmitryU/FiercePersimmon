@@ -2,7 +2,7 @@ class UserController {
     constructor() {
         this.login = (req, res) => {
             console.log(req.body);
-            global.models.user.find({where: {name: req.body.login}}).then((user) => {
+            models.user.find({where: {name: req.body.login}}).then((user) => {
                 if (user) {
                     res.status(200).json({message: 'Signed in!', success: true, body: {access_token: user.access_token}});
                 } else {
@@ -22,7 +22,7 @@ class UserController {
             if (!req.body.refresh_token || !access_token) {
                 res.status(200).json({message: 'Token Was not updated', success: false})
             } else {
-                global.models.user.find({where: {access_token: access_token}}).then((user) => {
+                models.user.find({where: {access_token: access_token}}).then((user) => {
                     user.update({refresh_token: req.body.refresh_token})
                         .then(() => res.status(200).json({message: 'Token Updated', success: true}));
                 });
