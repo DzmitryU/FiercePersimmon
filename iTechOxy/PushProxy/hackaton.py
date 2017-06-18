@@ -16,7 +16,9 @@ def notify():
     push_service = get_push_service(os.path.join(module_dir, 'firebase_config'))
 
     if push_service is not None:
-        is_success, response = push_service.notify(reg_ids=ids_set, message=message)
+        print(ids_set, message)
+        if ids_set is not None and message is not None:
+            is_success, response = push_service.notify(reg_ids=ids_set, message=message)
     else:
         response = 'Internal server error.'
 
@@ -26,4 +28,5 @@ def notify():
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=False)
+    app.run()
+
