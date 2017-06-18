@@ -57,7 +57,8 @@ class OxygenController {
                 console.log(user.room);
                 models.device.find({where: {room: user.room}}).then((device) => {
                     console.log(device.id);
-                    models.state.findAll({where: {device_id: device.id}, limit: req.query.number, order: [['time', 'DESC']]}).then((result) => {
+                    models.state.findAll({where: {device_id: device.id}, limit: Number(req.query.number),
+                        order: [['time', 'DESC']]}).then((result) => {
                         console.log(result.id);
                         res.status(200).json({message: 'Found', success: true, body: {room: user.room, states: result}});
                     });
